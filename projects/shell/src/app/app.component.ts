@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Component, ViewChild, ViewContainerRef, ɵrenderComponent as renderComponent, Inject, Injector, ComponentFactoryResolver } from '@angular/core';
+import { AuthLibService } from 'auth-lib';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styles: []
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  public isAuthenticated$: Observable<boolean> = of(false);
-  public name$: Observable<string> = of('');
+  title = 'shell';
 
-  constructor() { }
+  constructor(private service: AuthLibService, http: HttpClient) {
+    this.service.login('Max', null);
+  }
+
 }
 
