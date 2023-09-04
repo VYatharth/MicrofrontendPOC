@@ -1,39 +1,27 @@
-# Example for @angular-architects/module-federation
+# MicroFrontend
 
-This examples loads a microfrontend into a shell:
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
-![Microfrontend Loaded into Shell](./result.png)
+## Development server
 
-## Important Files
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-Have a particular look at the following files:
+## Code scaffolding
 
-- ``readme.md``: Shows how to install dependencies and how to start the example
-- ``projects\mfe1\webpack.config.js``: Microfrontend config
-- ``projects\shell\webpack.config.js``: Shell config
-- ``projects\shell\src\app\app.routes.ts``: Lazy route for microfrontend
-- ``projects\shell\src\decl.d.ts``: Typing for mapped Url pointing to microfrontend
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Installation and Usage
+## Build
 
-- Install packages: ``yarn`` (!)*
-- Start Micro Frontend (remote): ``ng serve mfe1 -o``
-- Start Shell (host): ``ng serve shell -o``
-- Make sure ``mfe1`` is started before ``shell`` is loaded into the browser
-- Use the hyperlink ``flights`` in the ``shell`` to load `mfe1`
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-\* Please note, you **must** use **yarn** during the beta phase of CLI 11 b/c it allows to override dependencies to force the CLI into webpack 5.
+## Running unit tests
 
-## More Details on Module Federation
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Have a look at this [article series about Module Federation](https://www.angulararchitects.io/aktuelles/the-microfrontend-revolution-part-2-module-federation-with-angular/)
+## Running end-to-end tests
 
-## Angular Trainings, Workshops, and Consulting
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-- [Angular Trainings and Workshops](https://www.angulararchitects.io/en/angular-workshops/)
-- [Angular Consulting](https://www.angulararchitects.io/en/consulting/)
+## Further help
 
-
-## Use commands to add new Micro frontend
-- ``ng add @angular-architects/module-federation --project shell --port 4200 --type host``
-- ``ng add @angular-architects/module-federation --project mfe1 --port 4201 --type remote``
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
